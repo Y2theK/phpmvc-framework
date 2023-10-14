@@ -1,0 +1,15 @@
+{
+    "name": "y2thek/phpmvc-framework",
+    "authors": [
+        {
+            "name": "Ye Yint Kyaw",
+            "email": "yeyintkyaw.dev@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\" : "./"
+        }
+    }
+}
