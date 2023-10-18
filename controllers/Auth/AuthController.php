@@ -2,11 +2,13 @@
 
 namespace app\controllers\Auth;
 
-use app\core\Controller;
 use app\core\Request;
+use app\core\Controller;
+use app\models\RegisterModel;
 
 class AuthController extends Controller
 {
+
     public function login()
     {
         $this->setLayout('guest');
@@ -14,21 +16,46 @@ class AuthController extends Controller
     }
     public function handleLogin(Request $request)
     {
+       
         echo "<pre>" ;
-            var_dump($request->getBody());
-        echo "</pre> ";
-        // $request->getBody();
+        var_dump($request->getBody());
+         echo "</pre> ";    
     }
-    public function register()
+    public function register(Request $request)
     {
         $this->setLayout('guest');
-        return $this->render('register');
+
+        $registerModel = new RegisterModel();
+
+            if($request->isGet()){
+                return $this->render('register',[
+                    'model' => $registerModel
+                ]);
+            }
+            $registerModel->loadData($request->getBody());
+
+            if($registerModel->validate() && $registerModel->register()){
+                return 'create user success';
+            }
+           
+            return $this->render('register',[
+                'model' => $registerModel
+            ]);
     }
     public function handleRegister(Request $request)
     {
-        echo "<pre>" ;
-        var_dump($request->getBody());
-         echo "</pre> ";
-    // $request->getBody();
+        // $this->registerModel = new RegisterModel();
+
+        // $this->registerModel->loadData($request->getBody());
+
+
+        // if($this->registerModel->validate() && $this->registerModel->register()){
+        //     return 'success';
+        // }
+        // return $this->render('register',[
+        //     'model' => $this->registerModel
+        // ]);
+       
+
     }
 }
