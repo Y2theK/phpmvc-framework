@@ -4,8 +4,9 @@ namespace app\models;
 
 use app\core\DbModel;
 use app\core\Model;
+use app\core\UserModel;
 
-class User extends DbModel
+class User extends UserModel
 {
 
     const STATUS_INACTIVE = 0;
@@ -28,6 +29,11 @@ class User extends DbModel
         ];
     }
 
+    public function getDisplayName(): string
+    {
+        return $this->name;
+    }
+
     public function save(){
 
         $this->password = password_hash($this->password, PASSWORD_BCRYPT);
@@ -35,9 +41,13 @@ class User extends DbModel
         return parent::save();
     }
 
-    public function tableName(): string
+    public static function tableName(): string
     {
         return 'users';
+    }
+    public static function primaryKey(): string
+    {
+        return 'id';
     }
 
     public function attributes(): array
