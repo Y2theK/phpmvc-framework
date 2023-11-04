@@ -9,6 +9,8 @@ use app\core\Response;
 
 class Application{
 
+    public string $layout = 'main';
+
     public Router $router;
     public Request $request;
     public Response $response;
@@ -20,7 +22,7 @@ class Application{
 
     public string $userClass;
 
-    public Controller $controller;
+    public ?Controller $controller = null;
 
     public function __construct(string $rootPath,array $config)
     {
@@ -66,6 +68,13 @@ class Application{
         return !self::$app->user;
     }
     public function run(){
-        echo $this->router->resolve();
+        try {
+            echo $this->router->resolve();
+        } catch (\Exception $e) {
+            $this->response->setStatusCode($e->getCode());
+            echo $this->router->renderView('errors/error',[
+                'exception' => $e
+            ]);
+        }
     }
 }

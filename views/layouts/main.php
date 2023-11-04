@@ -62,6 +62,7 @@ use app\core\Application;
       <?php else: ?>
 
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <a href="/profile" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-mediumm">Profile</a>
           <a href="/logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-mediumm">Welcome <?= Application::$app->user->getDisplayName() ?>(Logout)</a>
         </div>
       <?php endif; ?>
