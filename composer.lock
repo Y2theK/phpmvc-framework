@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bac3dfdec8ee83f51212651b8a2812b2",
+    "content-hash": "1396e025ca8005446619864a31fbe50f",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -474,6 +474,39 @@
                 }
             ],
             "time": "2022-10-16T01:01:54+00:00"
+        },
+        {
+            "name": "y2thek/php-mvcframework-core",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Y2theK/php-mvcframework-core.git",
+                "reference": "05a3722d6fdbe97de869827db2437b74b942801e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Y2theK/php-mvcframework-core/zipball/05a3722d6fdbe97de869827db2437b74b942801e",
+                "reference": "05a3722d6fdbe97de869827db2437b74b942801e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Y2thek\\PhpMvcframeworkCore\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ye Yint Kyaw",
+                    "email": "yeyintkyaw.dev@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/Y2theK/php-mvcframework-core/issues",
+                "source": "https://github.com/Y2theK/php-mvcframework-core/tree/v1.0.1"
+            },
+            "time": "2023-11-16T15:27:18+00:00"
         }
     ],
     "packages-dev": [],

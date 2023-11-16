@@ -2,10 +2,10 @@
 
 namespace app\controllers;
 
-use app\core\Application;
-use app\core\Controller;
-use app\core\Request;
-use app\core\Response;
+use Y2thek\PhpMvcframeworkCore\Application;
+use Y2thek\PhpMvcframeworkCore\Controller;
+use Y2thek\PhpMvcframeworkCore\Request;
+use Y2thek\PhpMvcframeworkCore\Response;
 use app\models\ContactForm;
 
 class SiteController extends Controller{

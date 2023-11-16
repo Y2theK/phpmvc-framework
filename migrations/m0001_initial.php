@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use Y2thek\PhpMvcframeworkCore\Application;
 
 class m0001_initial{
     public function up()

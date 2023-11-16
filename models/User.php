@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
-use app\core\Model;
-use app\core\UserModel;
+use Y2thek\PhpMvcframeworkCore\DbModel;
+use Y2thek\PhpMvcframeworkCore\Model;
+use Y2thek\PhpMvcframeworkCore\UserModel;
 
 class User extends UserModel
 {

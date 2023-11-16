@@ -3,12 +3,12 @@
 namespace app\controllers\Auth;
 
 use app\models\User;
-use app\core\Request;
-use app\core\Response;
-use app\core\Controller;
-use app\core\Application;
+use Y2thek\PhpMvcframeworkCore\Request;
+use Y2thek\PhpMvcframeworkCore\Response;
+use Y2thek\PhpMvcframeworkCore\Controller;
+use Y2thek\PhpMvcframeworkCore\Application;
 use app\models\LoginForm;
-use app\core\middlewares\AuthMiddleware;
+use Y2thek\PhpMvcframeworkCore\middlewares\AuthMiddleware;
 
 class AuthController extends Controller
 {
