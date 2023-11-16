@@ -1,5 +1,5 @@
 <?php
-/**@var $this \app\core\View */
+/**@var $this \Y2thek\PhpMvcframeworkCore\View */
 
 $this->title = 'Profile' 
 

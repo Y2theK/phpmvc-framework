@@ -1,6 +1,6 @@
 <?php
 use app\models\User;
-use app\core\Application;
+use Y2thek\PhpMvcframeworkCore\Application;
 use app\controllers\SiteController;
 use app\controllers\Auth\AuthController;
 

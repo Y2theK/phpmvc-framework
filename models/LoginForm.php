@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use app\core\Application;
-use app\core\Model;
+use Y2thek\PhpMvcframeworkCore\Application;
+use Y2thek\PhpMvcframeworkCore\Model;
 use app\models\User;
 
 class LoginForm extends Model

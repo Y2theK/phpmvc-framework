@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-use app\core\Model;
+use Y2thek\PhpMvcframeworkCore\Model;
 
 class ContactForm extends Model
 {
