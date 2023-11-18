@@ -11,10 +11,22 @@ use Y2thek\PhpMvcframeworkCore\Application;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title><?= $this->title ?></title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link
+  href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body data-theme="mytheme">
 <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -42,12 +54,14 @@ use Y2thek\PhpMvcframeworkCore\Application;
         </button>
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <a href="/" class="flex flex-shrink-0 items-center" >  
         <div class="flex flex-shrink-0 items-center">
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
         </div>
         <div class="flex flex-shrink-0 items-center mx-3 font-semibold text-white">
-          <h5>PHP MVC FRAMEWORK</h5>
+        <h5><?= $_ENV['APP_NAME'] ??  "PHP MVC FRAMEWORK" ?></h5>
         </div>
+      </a>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -82,10 +96,9 @@ use Y2thek\PhpMvcframeworkCore\Application;
 </nav>
 <div  class="flex flex-col justify-center items-center">
   <div class="container ">
-    
 
  <?php if(Application::$app->session->getFlashMessage('success')): ?>
-  <div class="flex items-center p-4 mt-4 mx-auto max-w-7xl  sm:px-6  lg:px-8 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+  <div class="flex items-center p-4 my-4 mx-auto max-w-7xl  sm:px-6  lg:px-8 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
     <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
     </svg>

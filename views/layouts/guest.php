@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link
+  href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
 </head>
-<body>
+<body  data-theme="mytheme">
 <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -33,13 +45,16 @@
         </button>
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex flex-shrink-0 items-center">
+      <a href="/" class="flex flex-shrink-0 items-center" >  
+  
+      <div class="flex flex-shrink-0 items-center">
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
         </div>
         <div class="flex flex-shrink-0 items-center mx-3 font-semibold text-white">
-          <h5>PHP MVC FRAMEWORK</h5>
+          <h5><?= $_ENV['APP_NAME'] ??  "PHP MVC FRAMEWORK" ?></h5>
         </div>
-      </div>
+      </div>  
+      </a>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <a href="/login" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-mediumm">Login</a>
         <a href="/register" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-mediumm">Register</a>
