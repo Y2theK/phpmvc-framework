@@ -33,6 +33,8 @@ class SiteController extends Controller{
             'model' => $contactForm
         ]);
     }
-
+    public function about(){
+        return $this->render('about');
+    }
    
 }

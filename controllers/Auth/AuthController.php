@@ -37,8 +37,6 @@ class AuthController extends Controller
         return $this->render('profile');
     }
 
-    
-    
     public function register(Request $request)
     {
         $this->setLayout('guest');

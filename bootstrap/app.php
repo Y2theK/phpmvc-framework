@@ -10,4 +10,6 @@ $config = require_once __DIR__.'/../config/app.php';
 
 $app = new Application(dirname(__DIR__),$config);
 
+require_once __DIR__.'/../routes/web.php';
+
 return $app;
