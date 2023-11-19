@@ -5,12 +5,8 @@ use app\controllers\SiteController;
 use app\controllers\Auth\AuthController;
 
 require_once __DIR__.'/../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->load();
 
-$config = require_once __DIR__.'/../config/app.php';
-
-$app = new Application(dirname(__DIR__),$config);
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 //BEFORE EVENT
 // $app->on(Application::EVENT_BEFORE_REQUEST,function(){
