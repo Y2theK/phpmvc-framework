@@ -34,7 +34,10 @@ class AuthController extends Controller
     }
 
     public function profile(){
-        return $this->render('profile');
+        $user = Application::$app->user;
+        return $this->render('profile',[
+            'user' => $user
+        ]);
     }
 
     public function register(Request $request)
@@ -65,28 +68,5 @@ class AuthController extends Controller
         Application::$app->logout();
         $response->redirect('/');
     }
-    
-    public function handleLogin(Request $request)
-    {
        
-        // echo "<pre>" ;
-        // var_dump($request->getBody());
-        //  echo "</pre> ";    
-    }
-    public function handleRegister(Request $request)
-    {
-        // $this->User = new User();
-
-        // $this->User->loadData($request->getBody());
-
-
-        // if($this->User->validate() && $this->User->register()){
-        //     return 'success';
-        // }
-        // return $this->render('register',[
-        //     'model' => $this->User
-        // ]);
-       
-
-    }
 }

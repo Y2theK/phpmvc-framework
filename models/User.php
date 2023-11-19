@@ -13,6 +13,11 @@ class User extends UserModel
     const STATUS_ACTIVE = 1;
     const STATUS_DELETED = 2;
 
+    public array $statusArray = [
+        self::STATUS_INACTIVE => 'Inactive',
+        self::STATUS_ACTIVE => 'Active',
+        self::STATUS_DELETED => 'Deleted',
+    ];
     public string $name = '';
     public string $email = '';
     public string $password = '';
@@ -33,10 +38,15 @@ class User extends UserModel
     {
         return $this->name;
     }
+    public function getDisplayStatus(): string
+    {
+        return $this->statusArray[$this->status];
+    }
 
     public function save(){
 
         $this->password = password_hash($this->password, PASSWORD_BCRYPT);
+        $this->status = self::STATUS_ACTIVE;
         
         return parent::save();
     }
